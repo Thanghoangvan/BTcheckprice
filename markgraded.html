@@ -44,21 +44,34 @@
         let c=+document.getElementById("english").value;
         let d=+document.getElementById("kv").value;
       let result;
-        if (a+b+c>=22.25){
-            alert("Tổng điểm khối d của bạn là: 30");
-        }
-        else{
-            if(d==01){
+       
+      if(d==01){
+          if (a+b+c<29.25){
       result=a+b+c+0.75;
     }
+          else{
+              result=30;}
     if(d==02){
-     result=a+b+c+0.25
+         if (a+b+c<29.75){
+      result=a+b+c+0.25;
     }
+          else{
+              result=30;}
+      }
     if(d==03){
-     result=a+b+c+0.5;
+         if (a+b+c<29.5){
+      result=a+b+c+0.5;
     }
+          else{
+              result=30;}
+     }
     if(d==04){
+         if (a+b+c<30){
       result=a+b+c;
+    }
+          else{
+              result=30;}
+    
     }
     alert("Tổng điểm khối d của bạn là: "+ result)
         }
