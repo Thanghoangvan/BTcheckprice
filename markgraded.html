@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><b>Tính điểm ĐH khối D</b></p>
+    <legend>
+        <b>Môn Toán</b>
+        <input type="number" id="math">
+     </legend>
+    &nbsp;
+     <legend>
+        <b>Môn Văn</b>
+        <input type="number" id="literature">
+    </legend>
+    &nbsp;
+    <legend>
+        <b>Môn Anh</b>
+        <input type="number" id="english">
+    </legend>
+    &nbsp;
+    <legend>
+        <b>Khu Vực</b>
+    <select name="đtt" id="kv">
+        <option value="0" >Chọn khu vực của bạn: </option>
+        <option value="01" >KV1</option>
+        <option value="02" >KV2</option>
+        <option value="03" >KV2-NT</option>
+        <option value="04" >KV3</option>
+    </select>
+    </legend>
+     <button onclick="mydemo()"></button>
+    </body>
+
+</html>
+<script>
+    function mydemo(){
+        let a=+document.getElementById("math").value;
+        let b=+document.getElementById("literature").value;
+        let c=+document.getElementById("english").value;
+        let d=+document.getElementById("kv").value;
+      let result;
+        if (a+b+c>=22.25){
+            alert("Tổng điểm khối d của bạn là: 30");
+        }
+        else{
+            if(d==01){
+      result=a+b+c+0.75;
+    }
+    if(d==02){
+     result=a+b+c+0.25
+    }
+    if(d==03){
+     result=a+b+c+0.5;
+    }
+    if(d==04){
+      result=a+b+c;
+    }
+    alert("Tổng điểm khối d của bạn là: "+ result)
+        }
+     
+    }
+</script>
